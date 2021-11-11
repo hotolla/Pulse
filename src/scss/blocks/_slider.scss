@@ -1,0 +1,40 @@
+.slider {
+  padding: 100px 0;
+}
+
+.slider__wrapper {
+  max-width: 770px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider__img {
+  width: 100%;
+}
+
+.slider__button-prev,
+.slider__button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  cursor: pointer;
+  width: 30px;
+  img {
+    width: 100%;
+  }
+}
+
+.slider__button-next.swiper-button-disabled,
+.slider__button-prev.swiper-button-disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.slider__button-prev {
+  left: 0;
+}
+.slider__button-next {
+  right: 0;
+}

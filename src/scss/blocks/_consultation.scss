@@ -1,0 +1,36 @@
+.consultation {
+  background: url(../img/form/form.jpg) center center/cover no-repeat;
+  padding: 100px 0;
+}
+
+.consultation__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  max-width: 800px;
+  width: 100%;
+}
+
+.consultation__text {
+  color: #ffffff;
+  font-size: 20px;
+  max-width: 426px;
+  width: 100%;
+}
+
+.form {
+  width: 300px;
+}
+.form__input {
+  width: 100%;
+  font-size: 14px;
+  color: #4b4b4b;
+  border-radius: 5px;
+  padding: 13px 20px;
+  border: none;
+  margin-bottom: 13px;
+  outline: none;
+  &::placeholder {
+    color: #4b4b4b;
+  }
+}

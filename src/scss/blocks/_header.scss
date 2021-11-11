@@ -1,0 +1,40 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 250px;
+  width: 100%;
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.header__official {
+  color: #ffffff;
+  text-align: center;
+  span {
+    display: block;
+  }
+}
+
+.header__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header__tel {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+}

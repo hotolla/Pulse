@@ -1,0 +1,17 @@
+.btn {
+  background: #c70101;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  color: #ffffff;
+  &_big {
+    font-size: 18px;
+    padding: 12px 31px;
+  }
+  &_order {
+    font-size: 14px;
+    padding: 11px 41px;
+  }
+}
