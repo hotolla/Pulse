@@ -66,6 +66,21 @@
   padding: 20px 25px;
   border: 2px solid #e8e8e8;
   text-align: center;
+  // overflow: hidden;
+}
+
+.catalog__item-wrapper {
+  display: flex;
+  width: calc(200% + 40px);
+}
+
+.catalog__item-front {
+  width: 50%;
+}
+
+.catalog__item-back {
+  width: 50%;
+  text-align: left;
 }
 
 .catalog__item-img {

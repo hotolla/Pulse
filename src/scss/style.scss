@@ -3,6 +3,10 @@
 
 @import "libs/swiper";
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 @import "blocks/container";
 @import "blocks/buttons";
 @import "blocks/promo";
@@ -13,5 +17,6 @@
 @import "blocks/catalog";
 @import "blocks/reviews";
 @import "blocks/footer";
-@import "blocks/media";
 @import "blocks/modals";
+
+@import "media/media";

@@ -38,3 +38,20 @@
 .slider__button-next {
   right: 0;
 }
+
+.slider__pagination {
+  margin-top: 30px;
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  &-active {
+    background-color: #c70109;
+  }
+}

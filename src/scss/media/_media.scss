@@ -1,3 +1,13 @@
+@media (max-width: 1024px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  .slider__pagination {
+    display: flex;
+  }
+}
+
 @media (max-width: 950px) {
   .btn_buy {
     font-size: 14px;
@@ -90,6 +100,10 @@
   .btn {
     padding: 5px 8px;
     font-size: 11px;
+    &_big {
+      font-size: 12px;
+      padding: 8px 21px;
+    }
   }
   .logo {
     max-width: 160px;
@@ -142,6 +156,7 @@
   .promo__item {
     width: 82px;
   }
+
   .promo__link {
     font-size: 16px;
   }
@@ -172,8 +187,32 @@
   .footer__socials {
     margin-top: 20px;
   }
+
   .footer__socials-link {
     width: 35px;
     height: 35px;
+  }
+
+  .modal_consultation.active {
+    max-width: 265px;
+    padding: 20px 30px 28px;
+  }
+
+  .modal__title {
+    font-size: 15px;
+  }
+
+  .modal__descr {
+    font-size: 13px;
+  }
+
+  .form {
+    width: 200px;
+  }
+
+  .footer {
+    iframe {
+      height: 70vh;
+    }
   }
 }

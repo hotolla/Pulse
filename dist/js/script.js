@@ -27,24 +27,45 @@ tabs();
 const slider = new Swiper(".slider__wrapper", {
   slidesPerView: 1,
   spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
 
-function showModals() {
+function showModals(modalClass, btnClass) {
   let overlay = document.querySelector(".overlay");
-  let modal = document.querySelector(".modal_consultation");
-  let openModalBtns = document.querySelectorAll(".btn_consultation");
-  let closeModalBtn = document.querySelector(".modal__close");
+  let modal = document.querySelector(modalClass);
+  let openModalBtns = document.querySelectorAll(btnClass);
+  let closeModalBtn = document.querySelectorAll(".modal__close");
 
   openModalBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       overlay.classList.add("active");
       modal.classList.add("active");
+      document.body.classList.add("no-scroll");
     });
   });
+
+  closeModalBtn.forEach((btnClose) => {
+    btnClose.addEventListener("click", function () {
+      overlay.classList.remove("active");
+      modal.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (e.target === overlay) {
+      overlay.classList.remove("active");
+      modal.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
+  });
 }
-showModals();
+showModals(".modal_consultation", ".btn_consultation");
+showModals(".modal_order", ".btn_order");
