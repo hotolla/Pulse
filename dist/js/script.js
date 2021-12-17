@@ -1,14 +1,14 @@
 function tabs() {
-  var tab = document.querySelectorAll(".catalog__tab");
-  var tabPane = document.querySelectorAll(".catalog__tab-pane");
+  let tab = document.querySelectorAll(".catalog__tab");
+  let tabPane = document.querySelectorAll(".catalog__tab-pane");
 
-  for (var i = 0; i < tab.length; i++) {
+  for (let i = 0; i < tab.length; i++) {
     tab[i].addEventListener("click", function (e) {
       /* e.preventDefault(); для ссылок */
-      var activeTabAttr = e.target.getAttribute("data-tab");
+      let activeTabAttr = e.target.getAttribute("data-tab");
 
-      for (var j = 0; j < tab.length; j++) {
-        var tabPaneAttr = tabPane[j].getAttribute("data-tab-pane");
+      for (let j = 0; j < tab.length; j++) {
+        let tabPaneAttr = tabPane[j].getAttribute("data-tab-pane");
 
         if (activeTabAttr === tabPaneAttr) {
           tab[j].classList.add("active");
@@ -23,6 +23,23 @@ function tabs() {
 }
 
 tabs();
+
+function toggleCard() {
+  const cardFront = document.querySelectorAll(".catalog__item-front");
+  const cardBack = document.querySelectorAll(".catalog__item-back");
+  const btnMore = document.querySelectorAll(".catalog__link-more");
+  const btnBack = document.querySelectorAll(".catalog__link-back");
+
+  for (let i = 0; i < btnMore.length; i++) {
+    btnMore[i].addEventListener("click", function (e) {
+      e.preventDefault();
+      cardFront[i].classList.remove("active");
+      cardBack[i].classList.add("active");
+    });
+  }
+}
+
+toggleCard();
 
 const slider = new Swiper(".slider__wrapper", {
   slidesPerView: 1,
