@@ -24,22 +24,26 @@ function tabs() {
 
 tabs();
 
-function toggleCard() {
-  const cardFront = document.querySelectorAll(".catalog__item-front");
-  const cardBack = document.querySelectorAll(".catalog__item-back");
-  const btnMore = document.querySelectorAll(".catalog__link-more");
-  const btnBack = document.querySelectorAll(".catalog__link-back");
+function swipeCard() {
+  let btnMore = document.querySelectorAll(".catalog__link-more");
+  let btnBack = document.querySelectorAll(".catalog__link-back");
 
-  for (let i = 0; i < btnMore.length; i++) {
-    btnMore[i].addEventListener("click", function (e) {
-      e.preventDefault();
-      cardFront[i].classList.remove("active");
-      cardBack[i].classList.add("active");
+  function toggleCard(btn) {
+    let cardFront = document.querySelectorAll(".catalog__item-front");
+    let cardBack = document.querySelectorAll(".catalog__item-back");
+    btn.forEach((el, i) => {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        cardFront[i].classList.toggle("active");
+        cardBack[i].classList.toggle("active");
+      });
     });
   }
-}
 
-toggleCard();
+  toggleCard(btnMore);
+  toggleCard(btnBack);
+}
+swipeCard();
 
 const slider = new Swiper(".slider__wrapper", {
   slidesPerView: 1,
@@ -86,3 +90,5 @@ function showModals(modalClass, btnClass) {
 }
 showModals(".modal_consultation", ".btn_consultation");
 showModals(".modal_order", ".btn_order");
+
+new WOW().init(); // все большие
